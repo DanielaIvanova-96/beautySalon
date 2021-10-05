@@ -28,12 +28,17 @@ public class LoginController {
         return "login";
     }*/
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String submitForm (@ModelAttribute("user") User user){
-        userRepository.save(user);
-        System.out.println(user);
+    /*@RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String submitForm (Model model){
+        User user = new User(model.getAttribute("user"));
+        String username = user.getEmail();
+        String password = user.getPassword();
+
+
+
+
         return "redirect:homepage";
-    }
+    }*/
 
 
 }

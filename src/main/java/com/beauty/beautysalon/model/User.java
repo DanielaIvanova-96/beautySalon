@@ -29,6 +29,9 @@ public class User {
     public User() {
     }
 
+    public User(Object user) {
+    }
+
     public String getEmail() {
         return email;
     }

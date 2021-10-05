@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+</head>
+<body>
+    <div class="container">
+        <h2>Create your Account</h2>
+        <form action="/registerForm" method="post" modelattribute="newUser">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="email" class="form-control"  id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" class="form-control"  id="pwd" placeholder="Enter password" name="password">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" class="form-control"  id="pwdConfirm" placeholder="Confirm password" name="passwordConfirm">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                <input type="text" class="form-control"  id="firstName" placeholder="Enter your first name" name="firstName">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                <input type="text" class="form-control"  id="lastName" placeholder="Enter your last name" name="lastName">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                <input type="number" class="form-control"  id="phoneNumber" placeholder="Enter your phone number" name="phoneNumber">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Registration</button>
+        </form>
+    </div>
+</body>
+</html>
