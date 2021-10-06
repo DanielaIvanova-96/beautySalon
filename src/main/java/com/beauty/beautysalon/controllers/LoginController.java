@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+
 @Controller
 public class LoginController {
 
@@ -20,25 +22,21 @@ public class LoginController {
         return "login";
     }
 
-    /*@RequestMapping(value="/login", method = RequestMethod.POST)
-    public String doRegistration (Model model){
-        User user = new User();
-        model.addAttribute("user", user);
+    @RequestMapping(value="/login", method = RequestMethod.POST)
+    public String doRegistration (@ModelAttribute("user") User user){
+
+        List<User> users = (List<User>) userRepository.findAll();
+
+        for(User test : users){
+            if(test.getEmail().equals(user.getEmail()) && test.getPassword().equals(user.getPassword())){
+                //System.out.println("Success login");
+                return "redirect:homepage";
+            }
+        }
 
         return "login";
-    }*/
+    }
 
-    /*@RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String submitForm (Model model){
-        User user = new User(model.getAttribute("user"));
-        String username = user.getEmail();
-        String password = user.getPassword();
-
-
-
-
-        return "redirect:homepage";
-    }*/
 
 
 }
